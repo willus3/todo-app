@@ -49,3 +49,49 @@ button {
 button:hover {
     background-color: #4cae4c;
 }
+/*---Dynamic List Styles---*/
+
+#todo-list {
+    width: 100%;
+    list-style: none;
+    margin-top: 1rem; 
+}
+.todo {
+    margin: 0.5rem; /* Vertical spacing only*/
+    background: white;
+    font-size: 1.2rem;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee; /* Adds a nice separator line*/
+    padding-bottom: 0.5rem;
+}
+.todo li {
+    flex: 1;
+    padding: 0 0.5rem;
+}
+ /* Dynamic Buttons */
+ .trash-btn, .complete-btn {
+    background: #ff6f47;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    margin-left: 0.2 rem;
+    border-radius: 3px;
+}
+
+.complete-btn {
+    background: #739c63;
+}
+
+.trash-btn:hover { background: #e3502b; }
+.complete-btn:hover { background: #5c854d; }
+
+.completed {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+

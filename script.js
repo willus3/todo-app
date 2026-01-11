@@ -11,6 +11,11 @@ function addTodo(event) {
     //1. Prevent form from submitting (refreshing the page)
     event.preventDefault();
 
+    //Bug fix
+    if (todoInput.value === "") {
+        return;
+    }
+
     //2. Create todo DIV
     const todoDiv = document.createElement('div');
     todoDiv.classList.add('todo');
