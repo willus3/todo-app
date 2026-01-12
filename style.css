@@ -91,7 +91,9 @@ button:hover {
 .complete-btn:hover { background: #5c854d; }
 
 .completed {
-    text-decoration: line-through;
     opacity: 0.5;
 }
 
+.completed li {
+    text-decoration: line-through;
+}

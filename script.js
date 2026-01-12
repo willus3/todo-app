@@ -6,6 +6,8 @@ const todoList = document.getElementById('todo-list');
 // 2. Event listeners
 todoButton.addEventListener('click', addTodo);
 
+todoList.addEventListener('click', deleteCheck);
+
 //Functions
 function addTodo(event) {
     //1. Prevent form from submitting (refreshing the page)
@@ -43,6 +45,21 @@ function addTodo(event) {
 
     //7. Clear input value
     todoInput.value = '';
+}
 
+function deleteCheck(e) {
+    const item = e.target;
 
+    //Delete TODO
+    if (item.classList.contains("trash-btn")) {
+        const todo = item.parentElement;
+        todo.remove();
+    }
+    // CHECK MARK
+    if (item.classList.contains("complete-btn")) {
+        console.log("Green button clicked!"); // <--- THE SPY
+        const todo = item.parentElement;
+        todo.classList.toggle("completed");
+        console.log(todo); // <--- Print the whole element to see if class changes
+    }
 }
